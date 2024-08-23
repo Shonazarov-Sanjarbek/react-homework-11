@@ -10,11 +10,8 @@ function App() {
     <>  
       <Routes>
         <Route path="/" element={<Layout/>}>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="wishlist" element={<Wishlist/>}/>
+
         </Route>
-        <Route path="login" element={<Login/>}/>
       </Routes>
     </>
   )
