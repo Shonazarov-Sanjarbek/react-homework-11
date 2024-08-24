@@ -46,9 +46,9 @@ const Header = () => {
   <IoLocationOutline />
   <select className="outline-none ml-2 text-center" name="" id="">
     <option value="">Your Location</option>
-    <option value="">Your Location</option>
-    <option value="">Your Location</option>
-    <option value="">Your Location</option>
+    <option value="">Uzbekistan</option>
+    <option value="">Russia</option>
+    <option value="">England</option>
   </select>
 </div>
         </div>
