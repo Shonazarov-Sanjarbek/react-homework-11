@@ -10,6 +10,8 @@ import { useStateValue } from '@/context';
 const Header = () => {
 
   const [{wishlist}, dispacth] = useStateValue()
+  const [{cart}, __] = useStateValue()
+
 
   console.log(wishlist.length);
   
@@ -53,18 +55,22 @@ const Header = () => {
 </div>
         </div>
         <div className="flex space-x-4">
-          <button className="relative flex  px-4 py-2 bg-white">
-            <div className="relative flex">
-              <FaRegHeart className="relative text-2xl" />
-            </div>
-            <p className="ml-3 font-bold ">Wishlist</p>
-          </button>
-          <button className="relative flex items-center px-4 py-2 bg-white">
-            <div className="relative flex">
-              <IoCartOutline className=" text-2xl" />
-            </div>
-            <p className="ml-3 font-bold ">Cart</p>
-          </button>
+          <NavLink to={"/wishlist"}>
+            <button className="relative flex  px-4 py-2 bg-white">
+              <div className="relative flex">
+                <FaRegHeart className="relative text-2xl" /><sup>{wishlist.length}</sup>
+              </div>
+              <p className="ml-3 font-bold ">Wishlist </p>
+            </button>
+          </NavLink>
+          <NavLink to={"/cart"}>
+            <button className="relative flex items-center px-4 py-2 bg-white">
+              <div className="relative flex">
+                <IoCartOutline className=" text-2xl" /><sup>{cart.length}</sup>
+              </div>
+              <p className="ml-3 font-bold ">Cart</p>
+            </button>
+          </NavLink>
           <button  className="relative flex px-4 py-2 bg-white align-text-bottom">
             <div className="relative flex items-center">
               <CiUser className="text-3xl" />
